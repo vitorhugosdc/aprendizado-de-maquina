@@ -35,8 +35,11 @@ estimator = MaximumLikelihoodEstimator(model, data)
 cpd_age = estimator.estimate_cpd("Age")
 cpd_gender = estimator.estimate_cpd("Gender")
 cpd_customer_type = estimator.estimate_cpd("Customer Type")
+cpd_flight_distance = estimator.estimate_cpd("Flight Distance")
+cpd_departure_delay = estimator.estimate_cpd("Departure Delay in Minutes")
+cpd_arrival_delay = estimator.estimate_cpd("Arrival Delay in Minutes")
 
-print(cpd_customer_type)
+print(cpd_arrival_delay)
 
 
 
