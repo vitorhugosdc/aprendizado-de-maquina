@@ -3,6 +3,7 @@ import numpy as np
 from pgmpy.models import BayesianNetwork
 from pgmpy.factors.discrete import TabularCPD
 from pgmpy.inference import VariableElimination
+from pgmpy.estimators import MaximumLikelihoodEstimator
 
 file_path = "Invistico_Airline.csv"
 data = pd.read_csv(file_path)
@@ -31,7 +32,7 @@ model = BayesianNetwork(
 
 cpd_customer_type = TabularCPD(
     variable="Customer Type",
-    variable_card=2,
+variable_card=2,
     values=[[0.7, 0.4, 0.6, 0.3, 0.5, 0.4], [0.3, 0.6, 0.4, 0.7, 0.5, 0.6]],
     evidence=["Age", "Gender"],
     evidence_card=[3, 2],
